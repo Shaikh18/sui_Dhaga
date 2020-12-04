@@ -1,0 +1,7 @@
+{
+  "name": "sui_dhaga",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
