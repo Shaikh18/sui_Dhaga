@@ -1,0 +1,38 @@
+*:focus{
+    outline: none;
+}
+
+.card1{
+    width: 387px;
+    position: relative;
+    height: 200px;
+    right: 6%;
+    bottom: 6%;
+
+}
+ion-item {
+    --border-width: 0 0 0 0 !important;
+}
+.first_input{
+    width: 80%;
+    position: relative;
+    left: 7%;
+    height: 43px;
+    line-height: 1;
+    --border-radius: 17%;
+    margin: 4%;
+    border: none;
+
+}
+.first_input ion-input{
+    --border-radius: 17px;
+   
+outline: none;
+}
+
+.first_input ion-item:focus{
+   border: none;
+}
+.main_section{
+    margin-top: 26%;
+}
