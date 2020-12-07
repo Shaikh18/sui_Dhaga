@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -23,6 +24,12 @@ const routes: Routes = [
     redirectTo: 'customer-details',
     pathMatch: 'full'
   },
+  {
+   
+      path: 'messages',
+      loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
+  }
+
 ];
 
 @NgModule({
