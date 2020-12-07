@@ -5,30 +5,31 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+
+    loadChildren: () => import('./register/register.module').then(m => m.RegisterPageModule)
   },
   {
     path: 'customer-details',
-    loadChildren: () => import('./customer-details/customer-details.module').then( m => m.CustomerDetailsPageModule)
+    loadChildren: () => import('./customer-details/customer-details.module').then(m => m.CustomerDetailsPageModule)
   },
   {
-    
+
     path: 'messages',
-    loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
+    loadChildren: () => import('./messages/messages.module').then(m => m.MessagesPageModule)
   },
-  {
-  path: '',
-  redirectTo: 'messages',
-  pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'messages',
+  //   pathMatch: 'full'
+  // },
 
 ];
 
