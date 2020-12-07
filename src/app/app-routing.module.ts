@@ -20,15 +20,15 @@ const routes: Routes = [
     loadChildren: () => import('./customer-details/customer-details.module').then( m => m.CustomerDetailsPageModule)
   },
   {
-    path: '',
-    redirectTo: 'customer-details',
-    pathMatch: 'full'
+    
+    path: 'messages',
+    loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
   },
   {
-   
-      path: 'messages',
-      loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
-  }
+  path: '',
+  redirectTo: 'messages',
+  pathMatch: 'full'
+  },
 
 ];
 

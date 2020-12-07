@@ -6,4 +6,32 @@
  .img_header{
      width: 400px;  
  }
- 
+
+.swiper-pagination-bullet-active{
+    --background-color: blue;
+}
+ion-card{
+    width: 100%;
+    height: 15rem;
+}
+ion-grid{
+    font-size: 10px;
+    color: black;
+    width: 100%;
+    font-weight: lighter;
+    font-family: ui-serif;
+}
+.shop_img{
+    width: 60px;
+    position: relative;
+    top: -7px;
+}
+.keeper_img{
+    width:50px;
+}
+ion-col{
+    text-align: start;
+}
+ion-input, ion-datetime{
+    text-align: end;
+}

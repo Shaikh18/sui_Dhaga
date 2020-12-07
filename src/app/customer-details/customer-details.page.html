@@ -15,45 +15,234 @@
     <!-- card 1 -->
     <ion-slide>
       <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+                <ion-label>Name</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input value="shaikh"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+                <ion-label>MarketID:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input value="0789"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+                <ion-label>Business to Date:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+                <ion-label>Outstanding balance:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input value="475"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>Contact Number:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input value="03343168930"></ion-input>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
       </ion-card>
     </ion-slide>
 
     <!-- card 2 -->
     <ion-slide>
       <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
+        <ion-grid>
+          
+          <ion-row>
+            <ion-col>
+              <ion-label>Floor number:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input value="04"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>Shop name:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input value="sui dhaga"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>Shop number:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input value="D-03"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+                <ion-lable>Shop picture:</ion-lable>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-input type="file" [id]="pic"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+                <ion-label>Shop keeper picture:</ion-label>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+              <ion-input type="file" [id]="pic"></ion-input>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
       </ion-card>
     </ion-slide>
 
     <!-- card 3 -->
     <ion-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
+    <ion-card>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+              <ion-label>Payment terms:</ion-label>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-input value="XYZ BANK"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+              <ion-label>COD:</ion-label>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-input value="03978556"></ion-input>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+              <ion-label>Visiting days:</ion-label>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-input value="friday"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+              <ion-label>Status:</ion-label>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-input value="none"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+              <ion-label>Opening balance:</ion-label>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-input value="8974"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+              <ion-label>Special discount:</ion-label>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-input value="96325"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+
       </ion-card>
     </ion-slide>
 
