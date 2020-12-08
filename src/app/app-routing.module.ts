@@ -31,15 +31,9 @@ const routes: Routes = [
       import('./messages/messages.module').then((m) => m.MessagesPageModule),
   },
   {
-<<<<<<< HEAD
-  path: '',
-  redirectTo: 'login',
-  pathMatch: 'full'
-=======
     path: '',
-    redirectTo: 'register',
-    pathMatch: 'full',
->>>>>>> 588df0d5cc6df9adae8f49715ea0b91d7422b3f7
+    redirectTo: 'customer-details',
+    pathMatch: 'full'
   },
 ];
 
@@ -49,4 +43,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

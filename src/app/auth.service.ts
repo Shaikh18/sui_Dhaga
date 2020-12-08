@@ -33,8 +33,7 @@ import { config } from 'src/config/main.config';
 export class PostsService {
   error = new Subject<string>();
 
-  constructor(private http: HttpClient) {}
-
+  constructor(private http: HttpClient) { }
   createAndStorePost(
     username: string,
     password: number,
@@ -50,11 +49,7 @@ export class PostsService {
       phone,
     };
     this.http
-      .post(config.api_url + '/register', postData, {
-        headers: new HttpHeaders({
-          'Access-Control-Allow-Origin': '*',
-        }),
-      })
+      .post('http://127.0.0.1:8000/api/login', postData)
       .subscribe(
         (responseData) => {
           console.log(responseData, 'server');
