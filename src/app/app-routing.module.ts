@@ -37,8 +37,13 @@ const routes: Routes = [
   },
   {
     path: '',
+<<<<<<< HEAD
     redirectTo: 'register',
     pathMatch: 'full',
+=======
+    redirectTo: 'customer-details',
+    pathMatch: 'full'
+>>>>>>> ff1b697d949e472efad1586a7e83787e88dac1c3
   },
 ];
 
@@ -48,4 +53,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
