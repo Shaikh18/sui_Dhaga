@@ -61,13 +61,100 @@
 }
 
 
-// media query for divecs 380
-@media only screen and (min-device-width : 375px)  and (max-device-width : 667px) {
+// media query for divecs 600px
+@media only screen and (min-device-width : 600px){
+   
+    .card1{
+        width: 324px;
+        position: relative;
+        right: 7%;
+        bottom: 10%;
+        zoom: 2;
+    }
 
+    .form{
+        position: absolute;
+        top: 44%;
+        left: 14%;
+        zoom: 2;
+    }
+
+    .powerd_by{
+        color: #195e83;
+        position: absolute;
+        top: 58.5rem;
+        left: 8rem;
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    .core2plus_img{
+        width: 13%;
+        position: relative;
+        left: 56%;
+        top: -59px;
+    }
 }
 
-// medai query for devices 412
-@media only screen and (min-device-width : 412px) and (max-device-width : 736px) 
-{
-   
+
+// media query for divecs 800px
+@media only screen and (min-device-width : 800px){
+    
+    .card1{
+        width: 18rem;
+        position: relative;
+        right: 7%;
+        bottom: 10%;
+        zoom: 3;
+    }
+
+    .form{
+        position: absolute;
+        top: 44%;
+        left: 24%;
+        zoom: 2;
+    }
+
+    .powerd_by{
+        color: #195e83;
+        position: absolute;
+        top: 74.5rem;
+        left: 14rem;
+        font-size: 21px;
+        font-weight: 700;
+    }
+}
+
+// media query for divecs 384px
+@media only screen and (min-device-width : 384px){
+
+    .card1{
+        width: 13rem;
+        position: relative;
+        right: 7%;
+        bottom: 10%;
+        zoom: 2;
+    }
+
+    .form{
+        position: absolute;
+        top: 47%;
+        left: 22%;
+    }
+
+    .powerd_by{
+        color: #195e83;
+        position: absolute;
+        top: 35.8rem;
+        left: 54px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .core2plus_img{
+        width: 8%;
+        position: relative;
+        left: 45%;
+        top: -25px;
+    }
 }

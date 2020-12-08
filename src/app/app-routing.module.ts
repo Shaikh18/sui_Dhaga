@@ -26,7 +26,7 @@ const routes: Routes = [
   },
   {
   path: '',
-  redirectTo: 'messages',
+  redirectTo: 'login',
   pathMatch: 'full'
   },
 
