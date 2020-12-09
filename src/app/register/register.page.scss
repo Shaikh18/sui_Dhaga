@@ -1,7 +1,11 @@
 *:focus{
     outline: none;
+    border: none;
 }
-
+.item-has-focus{--highlight-background: white;}
+.item-md.item-input.ion-input-has-focus .item-inner {
+    border: none;
+}
 .card1{
     width: 389px;
     position: relative;
@@ -61,13 +65,27 @@
 }
 
 
-// media query for divecs 380
-@media only screen and (min-device-width : 375px)  and (max-device-width : 667px) {
+// media query starts from here...
 
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px){
+  
+    .form {
+        position: relative;
+        top: -9%;
+        left: 17%;
+        width: 67%;
+    }
+.para p {
+    color: #195e83;
+    position: absolute;
+    top: 18rem;
+    left: 48px;
+    font-size: 13px;
+    font-weight: 700;
 }
+    }
 
-// medai query for devices 412
-@media only screen and (min-device-width : 412px) and (max-device-width : 736px) 
-{
-   
-}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    }
+    
