@@ -31,10 +31,16 @@ const routes: Routes = [
       import('./messages/messages.module').then((m) => m.MessagesPageModule),
   },
   {
+    path: 'authenticator',
+    loadChildren: () => import('./authenticator/authenticator.module').then(m => m.AuthenticatorPageModule)
+  },
+  {
     path: '',
-    redirectTo: 'customer-details',
+    redirectTo: 'authenticator',
     pathMatch: 'full'
   },
+
+
 ];
 
 @NgModule({

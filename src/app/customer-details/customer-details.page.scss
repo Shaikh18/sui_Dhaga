@@ -32,9 +32,10 @@ ion-grid{
 ion-col{
     text-align: start;
 }
-ion-input, ion-datetime{
-    text-align: end;
-}
+
 ion-slides {
-  height: 100%;
+  height: 90%;
+}
+.center{
+   text-align: center;
 }
