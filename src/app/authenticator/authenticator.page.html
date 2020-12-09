@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Authenticator</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="centered" *ngIf="isloading">
+  <ion-spinner> </ion-spinner>
+</div>
 
-<ion-content>
-
+<ion-content *ngIf="!isloading">
+  <div class="card1">
+    <img src="assets/img/logo.svg" alt="sui dhaga logo" class="img=fluid" />
+  </div>
+  <form class="form" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <ion-item *ngIf="!isLoadingMode">
+      <ion-label position="floating" class="lab_le">Full Name</ion-label>
+      <ion-input type="text" ngModel name="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" class="lab_le">Phone Number</ion-label>
+      <ion-input type="number" ngModel name="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" class="lab_le">Password</ion-label>
+      <ion-input
+        type="password"
+        ngModel
+        name="password"
+        minLength="4"
+      ></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!isLoadingMode">
+      <ion-label position="floating" minLength="4" class="lab_le"
+        >Confirm Password</ion-label
+      >
+      <ion-input type="password" ngModel name="confirmpassword"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="error">
+      <h4>{{error}}</h4>
+    </ion-text>
+    <div class="butt_on">
+      <ion-button shape="round" type="submit" [disabled]="!authForm.valid"
+        >{{isLoadingMode ? 'Login' : 'Register'}}</ion-button
+      >
+    </div>
+    <div class="para">
+      <p (click)="onSwitchMode()">
+        {{isLoadingMode ? 'click to get register' : 'Already have an account?'}}
+      </p>
+    </div>
+  </form>
+  <div class="powerd_by">
+    <p class="core2plus">Powerd by Core2Plus</p>
+    <img src="assets/img/core2plus.png" alt="" class="core2plus_img" />
+  </div>
 </ion-content>
