@@ -11,7 +11,7 @@
     <img class="img_header" src="assets/img/header.svg">
   </div> -->
   <!-- Scrollable Segment -->
-  <ion-toolbar class="less-height" color="primary">
+  <ion-toolbar class="less-height" color="app">
     <ion-segment scrollable mode="md" (ionChange)="segmentChanged(segment)" [(ngModel)]="segment">
       <ion-segment-button mode="md" id="seg-1" value="0">
         <p>Customer</p>
@@ -29,55 +29,205 @@
 
 <ion-content>
   <!-- slide 1 -->
-  <ion-slides #slides (ionSlideDidChange)="slideChanged()" class="word-slides">
-    <ion-slide>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label position="floating">Name</ion-label>
-              <ion-input></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+  <!-- [formGroup]="signupForm" -->
+  <form [formGroup]="customerDetails" (ngSubmit)="onSubmit()">
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()" class="word-slides">
+      <ion-slide>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Name</ion-label>
+                <ion-input formControlName="name"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label position="floating">Contact</ion-label>
-              <ion-input></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label position="floating">WhatsApp</ion-label>
-              <ion-input></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <ion-label position="floating">Select Picture</ion-label>
-              <ion-input></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
-    <!-- slide 2 -->
-    <ion-slide>
-      <p>Slide 2</p>
-    </ion-slide>
-    <!-- slide 3 -->
-    <ion-slide>
-      <p>Slide 3</p>
-    </ion-slide>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Contact</ion-label>
+                <ion-input formControlName="contact"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">WhatsApp</ion-label>
+                <ion-input formControlName="whatsapp"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="center">
+              <ion-button (click)="gallery()">select Image</ion-button>
 
-  </ion-slides>
-  <ion-button (click)="pickImage()">prev</ion-button>
-  <ion-button (click)="next()">next</ion-button>
 
+              <!-- <ion-button (click)="onCamera()">camera</ion-button> -->
+            </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col class="center">
+              <img src="assets/img/core2plus.png" style="width: 100px;" alt="">
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <!-- slide 2 -->
+      <ion-slide>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Shop Name</ion-label>
+                <ion-input formControlName="sname"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Shop No</ion-label>
+                <ion-input formControlName="sno"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Floor</ion-label>
+                <ion-input formControlName="floor"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Area </ion-label>
+                <ion-input formControlName="area"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Market</ion-label>
+                <ion-input formControlName="market"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="center">
+              <ion-button (click)="gallery()">select Image</ion-button>
+
+
+              <!-- <ion-button (click)="onCamera()">camera</ion-button> -->
+            </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col class="center">
+              <img src="assets/img/core2plus.png" style="width: 100px;" alt="">
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+
+
+      <!-- slide 3 -->
+      <ion-slide>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Status</ion-label>
+                <ion-input formControlName="status"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Visiting Days</ion-label>
+                <ion-input formControlName="vdays"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Cash on Delivery</ion-label>
+                <ion-input formControlName="cashondelivery"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Opening Balance </ion-label>
+                <ion-input formControlName="openbalance"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Business To Date </ion-label>
+                <ion-input formControlName="bdata"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Outstanding Balance</ion-label>
+                <ion-input formControlName="outbalance"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Special Discount</ion-label>
+                <ion-input formControlName="sdiscount"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Payment Terms </ion-label>
+                <ion-input formControlName="payment"></ion-input>
+              </ion-item>
+            </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col class="center">
+              <ion-button type="submit">Submit</ion-button>
+
+
+              <!-- <ion-button (click)="onCamera()">camera</ion-button> -->
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+
+    </ion-slides>
+    <ion-chip (click)="prev()">
+      <ion-label></ion-label>
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-chip>
+    <ion-chip style="float: right;" (click)="next()">
+      <ion-label></ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-chip>
+  </form>
 </ion-content>

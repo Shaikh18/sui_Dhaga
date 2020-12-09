@@ -36,10 +36,23 @@ const routes: Routes = [
       import('./messages/messages.module').then((m) => m.MessagesPageModule),
   },
   {
+<<<<<<< HEAD
     path: '',
     redirectTo: 'register',
     pathMatch: 'full',
+=======
+    path: 'authenticator',
+    loadChildren: () => import('./authenticator/authenticator.module').then(m => m.AuthenticatorPageModule)
+>>>>>>> 7d272a9ba9a236afc9127e54f4d82558542ce804
   },
+  {
+    path: '',
+
+    redirectTo: 'authenticator',
+  }
+
+
+
 ];
 
 @NgModule({
