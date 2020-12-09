@@ -37,13 +37,8 @@ const routes: Routes = [
   },
   {
     path: '',
-<<<<<<< HEAD
     redirectTo: 'register',
     pathMatch: 'full',
-=======
-    redirectTo: 'customer-details',
-    pathMatch: 'full'
->>>>>>> ff1b697d949e472efad1586a7e83787e88dac1c3
   },
 ];
 
