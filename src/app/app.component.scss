@@ -1,0 +1,40 @@
+
+
+
+// media query starts from here...
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px){
+    .card1 {
+        width: 389px;
+        position: relative;
+        right: 7%;
+        bottom: 20px!important;
+    }
+    .powerd_by {
+        color: #195e83;
+        position: absolute;
+        top: 32.5rem;
+        left: 45px;
+        font-size: 11px;
+        font-weight: 700;
+    }
+    .core2plus {
+        position: relative;
+        top: 27px;
+        left: 81px;
+    }
+
+    .form {
+   
+    top: 47%;
+    position: relative;
+    left: 18%;
+    width: 64%;
+}
+
+    }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    }
+    
