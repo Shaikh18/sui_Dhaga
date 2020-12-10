@@ -11,10 +11,6 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () =>
       import('./login/login.module').then((m) => m.LoginPageModule),
-    //  {
-    // path: '',
-    // redirectTo: 'login',
-    // pathMatch: 'full',
   },
 
   {
@@ -42,9 +38,15 @@ const routes: Routes = [
         (m) => m.AuthenticatorPageModule
       ),
   },
+
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./pages/profile/profile.module').then((m) => m.ProfilePageModule),
+  },
   {
     path: '',
-    redirectTo: 'authenticator',
+    redirectTo: 'profile',
     pathMatch: 'full',
   },
 ];

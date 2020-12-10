@@ -34,7 +34,11 @@
       <h4>{{error}}</h4>
     </ion-text>
     <div class="butt_on">
-      <ion-button shape="round" type="submit" [disabled]="!authForm.valid"
+      <ion-button
+        shape="round"
+        type="submit"
+        [disabled]="!authForm.valid"
+        routerLink="/home"
         >{{isLoadingMode ? 'Login' : 'Register'}}</ion-button
       >
     </div>

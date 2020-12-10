@@ -26,3 +26,14 @@
 //   text-decoration: none;
 // }
 /* Without setting height the slides will take up the height of the slide's content */
+.my-custom-menu {
+  --width: 150px;
+}
+.color {
+  --background: #fd7e14 !important;
+  color: white;
+}
+.btn {
+  color: black;
+  size: 20px;
+}

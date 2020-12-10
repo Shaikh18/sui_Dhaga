@@ -4,15 +4,18 @@
   </ion-toolbar>
 </ion-header> -->
 
-
-
 <ion-header>
   <!-- <div class="header_above">
     <img class="img_header" src="assets/img/header.svg">
   </div> -->
   <!-- Scrollable Segment -->
-  <ion-toolbar class="less-height" color="app">
-    <ion-segment scrollable mode="md" (ionChange)="segmentChanged(segment)" [(ngModel)]="segment">
+  <ion-toolbar class="less-height">
+    <ion-segment
+      scrollable
+      mode="md"
+      (ionChange)="segmentChanged(segment)"
+      [(ngModel)]="segment"
+    >
       <ion-segment-button mode="md" id="seg-1" value="0">
         <p>Customer</p>
       </ion-segment-button>
@@ -22,7 +25,6 @@
       <ion-segment-button mode="md" id="seg-3" value="2">
         <p>Others</p>
       </ion-segment-button>
-
     </ion-segment>
   </ion-toolbar>
 </ion-header>
@@ -31,7 +33,11 @@
   <!-- slide 1 -->
   <!-- [formGroup]="signupForm" -->
   <form [formGroup]="customerDetails" (ngSubmit)="onSubmit()">
-    <ion-slides #slides (ionSlideDidChange)="slideChanged()" class="word-slides">
+    <ion-slides
+      #slides
+      (ionSlideDidChange)="slideChanged()"
+      class="word-slides"
+    >
       <ion-slide>
         <ion-grid>
           <ion-row>
@@ -63,15 +69,12 @@
             <ion-col class="center">
               <ion-button (click)="gallery()">select Image</ion-button>
 
-
               <!-- <ion-button (click)="onCamera()">camera</ion-button> -->
             </ion-col>
-
           </ion-row>
           <ion-row>
             <ion-col class="center">
-              <img src="assets/img/core2plus.png" style="width: 100px;" alt="">
-
+              <img src="assets/img/core2plus.png" style="width: 100px" alt="" />
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -124,20 +127,16 @@
             <ion-col class="center">
               <ion-button (click)="gallery()">select Image</ion-button>
 
-
               <!-- <ion-button (click)="onCamera()">camera</ion-button> -->
             </ion-col>
-
           </ion-row>
           <ion-row>
             <ion-col class="center">
-              <img src="assets/img/core2plus.png" style="width: 100px;" alt="">
-
+              <img src="assets/img/core2plus.png" style="width: 100px" alt="" />
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-slide>
-
 
       <!-- slide 3 -->
       <ion-slide>
@@ -206,26 +205,22 @@
                 <ion-input formControlName="payment"></ion-input>
               </ion-item>
             </ion-col>
-
           </ion-row>
           <ion-row>
             <ion-col class="center">
               <ion-button type="submit">Submit</ion-button>
 
-
               <!-- <ion-button (click)="onCamera()">camera</ion-button> -->
             </ion-col>
-
           </ion-row>
         </ion-grid>
       </ion-slide>
-
     </ion-slides>
     <ion-chip (click)="prev()">
       <ion-label></ion-label>
       <ion-icon name="arrow-back-outline"></ion-icon>
     </ion-chip>
-    <ion-chip style="float: right;" (click)="next()">
+    <ion-chip style="float: right" (click)="next()">
       <ion-label></ion-label>
       <ion-icon name="arrow-forward-outline"></ion-icon>
     </ion-chip>

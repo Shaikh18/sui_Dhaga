@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { Subject, throwError } from 'rxjs';
+import { User } from './user.model';
 interface AuthResponseData {
   kind: string;
   idToekn: string;
@@ -15,6 +16,7 @@ interface AuthResponseData {
 })
 export class AuthService {
   constructor(private http: HttpClient) {}
+  user = new Subject<User>();
 
   signUp(email: string, password: string) {
     return this.http
@@ -37,6 +39,18 @@ export class AuthService {
               error = 'this email is not exist';
           }
           return throwError(error);
+        }),
+        tap((resData) => {
+          const expirationDate = new Date(
+            new Date().getTime() + +resData.expiresIn * 1000
+          );
+          const user = new User(
+            resData.email,
+            resData.localId,
+            resData.idToekn,
+            expirationDate
+          );
+          this.user.next(user);
         })
       );
   }
