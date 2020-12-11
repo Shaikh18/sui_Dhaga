@@ -27,7 +27,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'messages',
+    path: 'customerList',
     loadChildren: () =>
       import('./messages/messages.module').then((m) => m.MessagesPageModule),
   },
@@ -45,10 +45,16 @@ const routes: Routes = [
       import('./pages/profile/profile.module').then((m) => m.ProfilePageModule),
   },
   {
+    path: 'addOrder',
+    loadChildren: () => import('./add-order/add-order.module').then( m => m.AddOrderPageModule)
+  },
+  {
     path: '',
-    redirectTo: 'profile',
+    redirectTo: 'addOrder',
     pathMatch: 'full',
   },
+
+
 ];
 
 @NgModule({

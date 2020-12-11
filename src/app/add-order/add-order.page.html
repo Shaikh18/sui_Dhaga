@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="light">Add Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Item List</ion-label>
+      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="brown">Brown</ion-select-option>
+        <ion-select-option value="blonde">Blonde</ion-select-option>
+        <ion-select-option value="black">Black</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Quantity</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Current Amount</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Previous Amount</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Final Amount</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Payment </ion-label>
+      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="cash">Cash</ion-select-option>
+        <ion-select-option value="credit">Credit</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Balance Due</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Status</ion-label>
+      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="pending">Pending</ion-select-option>
+        <ion-select-option value="ready_to_dispatch">Ready to Dispatch</ion-select-option>
+        <ion-select-option value="delivered">Delivered</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
