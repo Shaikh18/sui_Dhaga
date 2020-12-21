@@ -52,7 +52,19 @@ const routes: Routes = [
     path: '',
     redirectTo: 'addOrder',
     pathMatch: 'full',
+  },  {
+    path: 'catalogue',
+    loadChildren: () => import('./catalogue/catalogue.module').then( m => m.CataloguePageModule)
   },
+  {
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
+  },
+  {
+    path: 'add-product',
+    loadChildren: () => import('./add-product/add-product.module').then( m => m.AddProductPageModule)
+  },
+
 
 
 ];

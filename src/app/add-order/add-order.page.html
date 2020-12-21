@@ -5,63 +5,46 @@
 </ion-header>
 
 <ion-content>
-  
-  <ion-list>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label>Customer</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="customer">Customer</ion-select-option>
+          </ion-select>
+          Total:
+        </ion-item>
+      </ion-list>
+    </ion-card-header>
+    
     <ion-item>
-      <ion-label>Item List</ion-label>
-      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select>
+      <ion-button color="success">
+        <ion-icon name="add"  size="small"></ion-icon>
+        Add Items
+      </ion-button>
     </ion-item>
-  </ion-list>
 
-  <ion-item>
-    <ion-label position="floating">Quantity</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-item>
+            <ion-label>Product</ion-label>
+            <ion-select placeholder="Select One">
+              <ion-select-option value="product">Product</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-input placeholder="Qty"></ion-input>
+        </ion-col>
+        <ion-col size="3">
+          <ion-input placeholder="Amount"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>  
 
-  <ion-item>
-    <ion-label position="floating">Current Amount</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Previous Amount</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Final Amount</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-list>
-    <ion-item>
-      <ion-label>Payment </ion-label>
-      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="cash">Cash</ion-select-option>
-        <ion-select-option value="credit">Credit</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-
-  <ion-item>
-    <ion-label position="floating">Balance Due</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-list>
-    <ion-item>
-      <ion-label>Status</ion-label>
-      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="pending">Pending</ion-select-option>
-        <ion-select-option value="ready_to_dispatch">Ready to Dispatch</ion-select-option>
-        <ion-select-option value="delivered">Delivered</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+  </ion-card>
 
 </ion-content>
